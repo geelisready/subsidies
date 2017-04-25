@@ -2,7 +2,7 @@
 # coding: utf-8
 
 """
-	functions for feature selection
+    functions for feature selection
 """
 # Author: Geel
 import pandas as pd
@@ -74,13 +74,13 @@ def readCsvToList(path):
         --------
         list : List                
     """
-	const = open(path).readlines()
-	list = []
-	for elem in const:
-		if elem[0] == 'u':
-			continue
-		list.append(elem.replace('\n', ''));
-	return list
+    const = open(path).readlines()
+    list = []
+    for elem in const:
+        if elem[0] == 'u':
+            continue
+        list.append(elem.replace('\n', ''));
+    return list
     
 def saveToCsv(df, path):
     """read DataFrame as csv
@@ -92,9 +92,9 @@ def saveToCsv(df, path):
             the path of the txt file
       
     """
-	df.to_csv(path, index = False, mode = 'w')
+    df.to_csv(path, index = False, mode = 'w')
 
-	
+    
     
 ## 序列化读取    
 def saveToPickle(ob, path):
@@ -107,8 +107,8 @@ def saveToPickle(ob, path):
             the path of the pkl file
       
     """
-	with open(path, 'w') as f: 
-		pickle.dump(ob, f)
+    with open(path, 'w') as f: 
+        pickle.dump(ob, f)
 
 def readFromPickle(path):
     """read object from pkl
@@ -121,7 +121,7 @@ def readFromPickle(path):
         --------
         ob : object                
     """
-	with open(path, 'r') as f:
-		ob = pickle.load(f)
-	return ob
-		
+    with open(path, 'r') as f:
+        ob = pickle.load(f)
+    return ob
+        
